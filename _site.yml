@@ -1,0 +1,29 @@
+name: "charcoal-website"
+output_dir: "."
+navbar:
+  title: "Evaporative cooling potential"
+  # href: index.html
+  left:
+    - text: "Country"
+      icon: fa-map
+      menu: 
+      - text: "Nigeria"
+        href: nigeria.html
+      - text: "India"
+        href: india.html
+
+    - text: "World"
+      icon: fa-map
+      href: world.html
+
+    - text: "Figures"
+      icon: fa-images
+      href: figure.html
+
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    # include:
+      # after_body: footer.html
+    css: styles.css
