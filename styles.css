@@ -2,3 +2,131 @@
 blockquote {
   font-style: italic
 }
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 15px;
+}
+
+.open-btn {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
+}
+.open-btn_s {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+}
+.popup{
+  position:absolute;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  /* bottom: 600px; */
+  left: 10px;
+  }
+  .popup_s{
+    position:absolute;
+    width: 50%;
+    height: 100vh;
+    display: none;
+    /* bottom: 600px; */
+    right: 10px;
+    }
+/* .popup-overlay{
+  background-color: black;
+  height: 100vh;
+  width: 500%;
+  position: absolute;
+} */
+.main-popup{
+  position: absolute;
+  left: 0px;
+  bottom: 100px;
+  /* height: 100%; */
+  width: 350px;
+  z-index: 1;
+  background-color: rgba(230, 255, 255, 0.7);
+  padding: 30px 20px;
+  line-height: 1rem;
+  /* border: 1px solid grey; */
+  /* border-radius: 3px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-popup_s{
+  position: absolute;
+  right: 0px;
+  bottom: 100px;
+  width: 350px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 30px 20px;
+  line-height: 1rem;
+   border: 1px solid grey;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close-btn{
+  border: .6px solid white;
+  padding: 7px;
+  position: absolute;
+  top:1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor:pointer;
+}
+.close-btn:hover{
+  background: white;
+}
+.close-btn_s{
+  border: .6px solid white;
+  padding: 7px;
+  position: absolute;
+  top:1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor:pointer;
+}
+.close-btn_s:hover{
+  background: white;
+}
+.popup-content p{
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+  0%{
+    transform: translateX(-100%)
+  }
+}
+@keyframes slide-out {
+  100% {
+    transform: translateX(-100%);
+  }
+  0%{
+    transform: translateX(0%)
+  }
+}

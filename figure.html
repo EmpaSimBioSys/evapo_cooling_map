@@ -29,65 +29,8 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }
-       #description h2 {
-            font-family: "Lora", serif;
-            letter-spacing: .04em;
-        }
-        #description {
-            position: fixed;
-            bottom: 50px;
-            left: 10px;
-            width: 350px;
-            padding: 0px 15px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border: 1px solid grey;
-            border-radius: 3px;
-            z-index: 800;
-        }
-        
-        #description p {
-            font-size: .9em;
-            line-height: 1.5em;
-        }
-        
-        #description a {
-            color: #005daa;
-            text-decoration: none;
-        }
-        
-        #description a:hover {
-            text-decoration: underline;
-        }
-       
-        #explanation h2 {
-            font-family: "Lora", serif;
-            letter-spacing: .04em;
-        }
-        #explanation {
-            position: fixed;
-            bottom: 50px;
-            right: 10px;
-            width: 350px;
-            padding: 0px 15px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border: 1px solid grey;
-            border-radius: 3px;
-            z-index: 800;
-        }
-        
-        #explanation p {
-            font-size: .9em;
-            line-height: 1.5em;
-        }
-        
-        #explanation a {
-            color: #005daa;
-            text-decoration: none;
-        }
-        
-        #explanation a:hover {
-            text-decoration: underline;
-        }
+      
+
 
 </style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
@@ -304,19 +247,37 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 
-  <div id="description">
-    <h1>About</h1>
-    <p>This website was created to enhance the visualization of the datasets discussed in the paper <b>"Evaporative cooling devices for postharvest storage: where to best use then and how well do they work?"</b>. Please refer to the paper (hyperlink coming soon) for more details.</p>
-    <p>These maps demonstrate <b>the evaporative cooling potential</b>. This is the temperature depression that can be achieved by cooling the ambient temperature down to dewpoint temperature.</p>
-    <p>We are <a href="https://www.empa.ch/web/simbiosys/overview" target="_blank"><b>SimBioSys (Simulating Biological Systems) group</b></a> at Empa, St Gallen.</p>
-    <a href="https://www.empa.ch/" target="_blank"><img src="img/company_logo.png" alt="Empa logo"></a>
-    <p>Map authored by Kanaha Shoji, created on May 2022</p>
-   </div>
-   <div id="explanation">
+  <div  class="btn">
+    <button class="open-btn">About</button>
+  </div>
+  <div class="popup">
+    <!-- <div class="popup-overlay"></div> -->
+    <div class="main-popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h1>About</h1>
+        <p>This website was created to enhance the visualization of the datasets discussed in the paper <b>"Evaporative cooling devices for postharvest storage: where to best use then and how well do they work?"</b>. Please refer to <a href="https://doi.org/10.31224/2334" target="_blank"> the paper (DOI: https://doi.org/10.31224/2334)</a>  for more details.</p>
+        <p>These maps demonstrate <b>the evaporative cooling potential</b>. This is the temperature depression that can be achieved by cooling the ambient temperature down to dewpoint temperature.</p>
+        <p>We are <a href="https://www.empa.ch/web/simbiosys/overview" target="_blank"><b>SimBioSys (Simulating Biological Systems) group</b></a> at Empa, St Gallen.</p>
+        <a href="https://www.empa.ch/" target="_blank"><img src="img/company_logo.png" alt="Empa logo"></a>
+        <p>Map authored by Kanaha Shoji, created on May 2022</p>
+      </div>
+    </div>
+  </div>
+
+   <div  class="btn">
+    <button class="open-btn_s">Source</button>
+  </div>
+   <div class="popup_s">
+    <div class="main-popup_s">
+      <div class="popup-content">
+        <span class="close-btn_s">&times;</span>
     <h3>Sources</h3>
    <p>The calculations to derive the temperature depressions were conducted using <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=form" target="_blank">the monthly temperature and relative humidity data of 2020 from ERA5</a> (accessed Jul 2021).</p>
-   <p>The clinpping of the world was done by using <a href= "https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/countries" target="_blank"> Countries 2020 (Scale 1:1 Million) Shapefile from eurostat</a> (accessed Jul 2021). </p>
+   <p>The clipping of the world was done by using <a href= "https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/countries" target="_blank"> Countries 2020 (Scale 1:1 Million) Shapefile from eurostat</a> (accessed Jul 2021). </p>
   </div>
+</div>
+</div>
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
@@ -420,6 +381,6 @@ $(document).ready(function () {
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
-
+<script src="app.js"></script>
 </body>
 </html>
